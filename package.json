@@ -1,7 +1,7 @@
 {
-  "name": "gulp-intro",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@realmbk/gulp-boilerplate",
+  "version": "0.1.0",
+  "description": "Default Gulp Boilerplate",
   "main": "index.js",
   "scripts": {
     "dev": "gulp",
@@ -10,31 +10,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mikkelmbk/gulp-intro.git"
+    "url": "git+https://github.com/Mikkelmbk/gulp-boilerplate.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Gulp",
+    "Sass",
+    "Pug",
+    "imageMin",
+    "babel",
+    "boilerplate"
+  ],
+  "author": "Mikkel Back Koll <Mikkelmbk@live.dk>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mikkelmbk/gulp-intro/issues"
+    "url": "https://github.com/Mikkelmbk/gulp-boilerplate/issues"
   },
-  "homepage": "https://github.com/Mikkelmbk/gulp-intro#readme",
-  "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.7.0",
-    "gulp-declare": "^0.3.0",
-    "gulp-imagemin": "^6.2.0",
-    "gulp-pug": "^4.0.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-terser": "^1.2.0",
-    "imagemin-jpeg-recompress": "^6.0.0"
+  "homepage": "https://github.com/Mikkelmbk/gulp-boilerplate#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1"
   },
-  "dependencies": {}
+  "public": true
 }
