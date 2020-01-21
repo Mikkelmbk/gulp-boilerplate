@@ -7,7 +7,6 @@ var recompress = require("imagemin-jpeg-recompress");
 function imageTask(){
 	return gulp.src("src/img/*")
 	.pipe(imagemin([
-		imagemin.jpegtran({progressive:true}),
 		recompress({
 			min:40,
 			max:90,
