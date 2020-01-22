@@ -49,7 +49,7 @@ copyFiles("src/js", "./src/js");
 copyFiles("src/img", "./src/img");
 copyFiles("src/media", "./src/media");
 copyFile("gulpfile.js", "./gulpfile.js");
-copyFile(".gitignore", "./.gitignore");
+copyFile("gitignore", "./.gitignore");
 
 
 exec("npm i -D @babel/core @babel/preset-env gulp gulp-babel gulp-clean-css gulp-concat gulp-connect gulp-imagemin gulp-pug gulp-rename gulp-sass gulp-sourcemaps gulp-terser imagemin-jpeg-recompress", function (err, stdout, stderr) {
