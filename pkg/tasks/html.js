@@ -10,9 +10,8 @@ let fileExt;
 
 
 
-function htmlTask() {
-
-	fs.readdirSync('./src/html').forEach((file) => {
+function htmlTask(done) {
+	 fs.readdirSync('./src/html').forEach((file) => {
 
 		if (fs.lstatSync(`./src/html/${file}`).isFile()) {
 			fileExt = path.extname(file);
@@ -42,12 +41,10 @@ function htmlTask() {
 			}
 
 			else if (fileExt == ".ejs") {
-				// console.log(`Vi er inde i Ejs If statementet`);
+				console.log(`Vi er inde i Ejs If statementet`);
 				return gulp.src("src/html/*.ejs")
 					.pipe(sourcemaps.init())
-					.pipe(ejs({
-						thisIsMyVariable: "Hello World"
-					}))
+					.pipe(ejs())
 					.pipe(rename(function (path) {
 						if (path.basename != "index") {
 							path.dirname = path.basename;
@@ -85,20 +82,19 @@ function htmlTask() {
 		}
 	})
 
+	done();
+
 }
 
 function watchHTML() {
-	return gulp.watch("src/html/*.*", { ignoreInitial: false }, htmlTask)
+	return gulp.watch("src/html/**/*", { ignoreInitial: false }, htmlTask)
 }
 
-function watchLayoutHTML() {
-	return gulp.watch("src/html/layouts/*.*", { ignoreInitial: false }, htmlTask)
-}
+
 
 
 
 module.exports = {
 	htmlTask,
 	watchHTML,
-	watchLayoutHTML
 }

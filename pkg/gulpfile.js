@@ -5,8 +5,8 @@ var { scssTask, watchSCSS } = require("./tasks/scss");
 var { imageTask, watchImg } = require("./tasks/img");
 var { mediaTask, watchMedia } = require("./tasks/media");
 
-function watch(){
-	watchHTML();
+function watch(done){
+	watchHTML(done);
 	watchSCSS();
 	watchJS();
 	watchImg();
