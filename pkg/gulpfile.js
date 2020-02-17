@@ -1,5 +1,5 @@
 var connect = require("gulp-connect");
-var { watchHTML, htmlTask, watchLayoutHTML } = require("./tasks/html");
+var { watchHTML, htmlTask } = require("./tasks/html");
 var { jsTask, watchJS } = require("./tasks/js");
 var { scssTask, watchSCSS } = require("./tasks/scss");
 var { imageTask, watchImg } = require("./tasks/img");
@@ -11,7 +11,6 @@ function watch(done){
 	watchJS();
 	watchImg();
 	watchMedia();
-	watchLayoutHTML();
 
 	connect.server({
 		livereload: true,
