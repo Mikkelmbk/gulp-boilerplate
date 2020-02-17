@@ -1,6 +1,6 @@
 {
   "name": "@realmbk/gulp-boilerplate",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Default Gulp Boilerplate",
   "main": "index.js",
   "bin": {
